@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SingleBirthday from './SingleBirthday'
 import { data } from './data'
+import Navbar from './Navbar'
 
 const Birthday = () => {
     const [info,setInfo] = useState(data)
@@ -12,7 +13,8 @@ const Birthday = () => {
 
     }
   return (
-    <>
+    <>  
+        <Navbar/>
         <div className="container shadow p-3 col-lg-7 m-auto">
             <h1 className="text-center">
                 {info.length} birthdays today
