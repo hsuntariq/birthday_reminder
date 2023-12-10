@@ -5,7 +5,8 @@ import Window from "./windowSize/Window"
 import Accordian from "./accoridians/Accordian"
 import BasicsInputs from "./controlledInputs/BasicsInputs"
 import Generator from "./loremGenerator/Generator"
-import Todo from "./todo/Todo"
+import Todo from "./complexTodo/Todo"
+import ObjectState from "./ObjectState/ObjectState"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       {/* <BasicsInputs/> */}
       {/* <Generator/> */}
       <Todo/>
+      {/* <ObjectState/> */}
     </>
   )
 }

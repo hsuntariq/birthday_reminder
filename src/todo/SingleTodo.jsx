@@ -1,7 +1,7 @@
 import React from 'react'
 import { MdDelete } from "react-icons/md";
 
-const SingleTodo = ({todo,id,remove}) => {
+const SingleTodo = ({todo,name,age,time,id,remove}) => {
   return (
     <>
         <div className="col-md-4">
@@ -13,7 +13,9 @@ const SingleTodo = ({todo,id,remove}) => {
                 <h4>
                     {todo}
                 </h4>
-                
+                <h5>Name:{name}</h5>
+                <h6>Age:{age}</h6>
+                <a href="">{time}</a>
                 </div>
                 <div className="icon">
                 <MdDelete onClick={()=>remove(id)} size={20} color='red' cursor='pointer' />

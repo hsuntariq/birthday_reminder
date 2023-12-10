@@ -3,6 +3,9 @@ import SingleTodo from './SingleTodo';
 
 const Todo = () => {
     const [todo,setTodo] = useState('');
+    const [name,setName] = useState('');
+    const [age,setAge] = useState('');
+    const [time,setTime] = useState('');
     const [data,setData] = useState([]);
     const removeTodo = (id) => {
         let newTodos = data.filter((items)=>{
@@ -12,7 +15,7 @@ const Todo = () => {
     }
     const handleClick = (e) => {
         e.preventDefault();
-        setData([...data,{todo,id:Date.now()}])
+        setData([...data,{todo,name,age,time,id:Date.now()}])
         setTodo('')
     }
   return (
@@ -24,7 +27,13 @@ const Todo = () => {
             <form>
                 <label htmlFor="">Todo</label>
                 <input value={todo} onChange={(e)=>setTodo(e.target.value)} className='form-control' type="text" placeholder='Enter your todo...' />
-                <button onClick={handleClick} className='btn btn-dark my-1 w-100'>
+                <label htmlFor="">Name</label>
+                <input value={name} onChange={(e)=>setName(e.target.value)} className='form-control' type="text" placeholder='Enter your Name...' />
+                <label htmlFor="">Age</label>
+                <input value={age} onChange={(e)=>setAge(e.target.value)} className='form-control' type="number" placeholder='Enter your Age...' />
+                <label htmlFor="">Time</label>
+                <input value={time} onChange={(e)=>setTime(e.target.value)} className='form-control' type="time" placeholder='Enter your todo...' />
+                <button onClick={handleClick} className='btn btn-dark my-2 w-100'>
                     Add todo
                 </button>
             </form>
