@@ -1,0 +1,35 @@
+
+.red{
+    color: red;
+}
+
+.nv{
+    position: relative;
+
+}
+
+.show2{
+    transform: translateX(-110%);
+}
+
+@media only screen and (max-width:600px){
+    .nv,ul,.menu-items,.brand{
+        flex-direction: column;
+        width: 100% !important;
+       transition: all 0.9s !important;
+    }
+    .li{
+        width: 100%;
+    }
+
+    .menu-items{
+        background: #000;
+    }
+    .icon{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+   
+}

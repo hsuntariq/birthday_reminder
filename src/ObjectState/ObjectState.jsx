@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { AppContext } from '../context2';
 
 const ObjectState = () => {
-    const [user,setUser] = useState({
-        name:'Ali',age:23,email:'ali@mail.com',number:'0314324323'
-    })
+   const data = useContext(AppContext);
+   console.log(data)
     // destructure
-    const {name,email,age,number} = user;
+    const {name,email,age,number} = data.user;
     const change = () => {
-        setUser({...user,name:'ahmed',test:'new value'})
+        setUser({...data.user,name:'ahmed',test:'new value'})
     }
 
   return (
@@ -22,7 +22,7 @@ const ObjectState = () => {
             {email}
         </h1>
         <h1 className='text-center'>
-            {user.test}
+           
         </h1>
         <button onClick={change} className='d-block m-auto btn btn-danger'>
             change name

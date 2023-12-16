@@ -1,4 +1,4 @@
-export const questions = [
+export const data = [
     {
         id:10,
         question:'stick nice cabin mistake ride door climate policeman electricity like enjoy ?',
